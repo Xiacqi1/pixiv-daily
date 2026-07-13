@@ -1,56 +1,86 @@
 package com.microyu.pixiv;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.net.URL;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 
-public class HttpUtls {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-    /**
-     * 获取 HTTP 连接
-     *
-     * @param url
-     * @return
-     * @throws IOException
-     */
-    public static HttpURLConnection getHttpUrlConnection(String url) throws IOException {
-        URL httpUrl = new URL(url);
-//        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("127.0.0.1", 1081));
-//        HttpURLConnection httpConnection = (HttpURLConnection)httpUrl.openConnection(proxy);
-        HttpURLConnection httpConnection = (HttpURLConnection)httpUrl.openConnection();
-        httpConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
-        return httpConnection;
+/**
+ * HTTP 工具类
+ * <p>
+ * 基于 Java 11 HttpClient，支持超时、重试（指数退避）和响应码校验
+ */
+public final class HttpUtls {
+
+    private static final Logger log = LoggerFactory.getLogger(HttpUtls.class);
+
+    private static final HttpClient HTTP_CLIENT = HttpClient.newBuilder()
+            .followRedirects(HttpClient.Redirect.NORMAL)
+            .connectTimeout(Duration.ofMillis(Config.HTTP_TIMEOUT_MS))
+            .build();
+
+    private HttpUtls() {
+        // 工具类禁止实例化
     }
 
     /**
-     * 请求指定 URL 返回内容
+     * 请求指定 URL，返回响应内容（带重试）
      *
-     * @param url
-     * @return
-     * @throws IOException
+     * @param url 请求地址
+     * @return 响应体字符串
+     * @throws IOException 重试耗尽后仍失败时抛出
      */
     public static String getHttpContent(String url) throws IOException {
-        HttpURLConnection httpUrlConnection = getHttpUrlConnection(url);
-        StringBuilder stringBuilder = new StringBuilder();
-        // 获得输入流
-        try (InputStream input = httpUrlConnection.getInputStream(); BufferedInputStream bis = new BufferedInputStream(
-            input);) {
-            byte[] buffer = new byte[1024];
-            int len = -1;
-            // 读到文件末尾则返回-1
-            while ((len = bis.read(buffer)) != -1) {
-                stringBuilder.append(new String(buffer, 0, len));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            httpUrlConnection.disconnect();
-        }
-        return stringBuilder.toString();
-    }
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .timeout(Duration.ofMillis(Config.HTTP_TIMEOUT_MS))
+                .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+                .header("Accept", "application/json")
+                .header("Accept-Encoding", "gzip")
+                .GET()
+                .build();
 
+        IOException lastException = null;
+
+        for (int attempt = 1; attempt <= Config.MAX_RETRIES; attempt++) {
+            try {
+                log.info("HTTP GET {} (attempt {}/{})", url, attempt, Config.MAX_RETRIES);
+                HttpResponse<String> response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
+
+                int statusCode = response.statusCode();
+                if (statusCode != 200) {
+                    throw new IOException("HTTP " + statusCode + " for URL: " + url);
+                }
+
+                String body = response.body();
+                log.info("HTTP GET success, response length: {} chars", body.length());
+                return body;
+
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new IOException("HTTP request interrupted for URL: " + url, e);
+            } catch (IOException e) {
+                lastException = e;
+                log.warn("HTTP request failed (attempt {}/{}): {}", attempt, Config.MAX_RETRIES, e.getMessage());
+
+                if (attempt < Config.MAX_RETRIES) {
+                    long backoffMs = (long) Math.pow(2, attempt - 1) * 1000; // 1s, 2s, 4s...
+                    log.info("Retrying in {}ms...", backoffMs);
+                    try {
+                        Thread.sleep(backoffMs);
+                    } catch (InterruptedException ie) {
+                        Thread.currentThread().interrupt();
+                        throw new IOException("Retry wait interrupted for URL: " + url, ie);
+                    }
+                }
+            }
+        }
+
+        throw new IOException("HTTP request failed after " + Config.MAX_RETRIES + " retries for URL: " + url, lastException);
+    }
 }

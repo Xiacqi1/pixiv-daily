@@ -1,39 +1,47 @@
-# 工作流名称
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
 name: Java CI with Maven
 
-# 工作流触发条件
 on:
-  # 定时 Cron 表达式
+  # 定时触发：UTC 04:05 = 北京时间 12:05
   schedule:
-    - cron:  '5 4 * * *' # utc+8 12:05
-  # 监听
-  watch:
-    # 当仓库被Star时，触发
-    types: started
+    - cron: '5 4 * * *'
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest # 运行环境
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-    # 任务步骤
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: Run Java Application
-      run: java -jar target/pixiv-daily-jar-with-dependencies.jar
-    - name: Commit files
-      run: |
-         git config --local user.email "2645047361@qq.com"
-         git config --local user.name "Xiacqi1"
-         git add README.md
-         git commit -m "update readme.md"
-    - name: Push changes
-      uses:  ad-m/github-push-action@master
-      with:
-         github_token: ${{ secrets.MY_GIT_TOKEN }}
-         branch: main
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      - name: Run Java Application
+        run: java -jar target/pixiv-daily-jar-with-dependencies.jar
+
+      - name: Commit and push README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "update readme.md"
+          file_pattern: "README.md"
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pixiv-daily-logs
+          path: logs/
+          retention-days: 7

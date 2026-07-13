@@ -1,49 +1,75 @@
 package com.microyu.pixiv;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
+/**
+ * Pixiv Daily 主入口
+ * <p>
+ * 从 Pixiv 排行榜 API 获取 JSON 数据，解析图片信息，渲染到 README.md
+ */
 public class Pixiv {
 
-    // BING API
-    private static String PIXIV_API = "https://www.pixiv.net/ranking.php?format=json&mode=daily&p=1";
+    private static final Logger log = LoggerFactory.getLogger(Pixiv.class);
+    private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        log.info("Pixiv Daily started");
+        log.info("API URL: {}", Config.PIXIV_API_URL);
+        log.info("Image count: {}, CDN: {}, Max retries: {}", Config.IMAGE_COUNT, Config.CDN_DOMAIN, Config.MAX_RETRIES);
 
-        String httpContent = HttpUtls.getHttpContent(PIXIV_API);
-        JSONObject jsonObject = JSON.parseObject(httpContent);
-        JSONArray jsonArray = jsonObject.getJSONArray("contents");
+        try {
+            // 1. 请求 API
+            String httpContent = HttpUtls.getHttpContent(Config.PIXIV_API_URL);
 
-        List<Image> imagesList = new ArrayList<>();
+            // 2. 解析 JSON
+            JsonNode root = MAPPER.readTree(httpContent);
+            JsonNode contents = root.get("contents");
 
-        for (int i = 0; i < 48; i++) {
-            jsonObject = (JSONObject) jsonArray.get(i);
-            System.out.println(jsonObject.toString());
+            if (contents == null || !contents.isArray()) {
+                log.error("API response does not contain 'contents' array");
+                return;
+            }
 
-            // 图片地址
-            String originUrl = (String) jsonObject.get("url");
-            String smallUrl = originUrl.replace("i.pximg.net", "pixiv.microyu.workers.dev");
-            String bigUrl = smallUrl.replace("/c/240x480/img-master/", "/img-original/").replace("_master1200", "");
-            System.out.println(bigUrl);
+            int available = contents.size();
+            int count = Math.min(Config.IMAGE_COUNT, available);
+            log.info("Found {} items, will process {}", available, count);
 
-            // 图片时间
-            String data = (String) jsonObject.get("data");
-            // 图片标题
-            String title = (String) jsonObject.get("title");
-            // 页面地址
-            String pageUrl = "https://www.pixiv.net/artworks/" + jsonObject.get("illust_id");
-            // 图片作者
-            String userName = (String) jsonObject.get("user_name");
+            // 3. 解析图片列表
+            List<Image> imagesList = new ArrayList<>();
+            for (int i = 0; i < count; i++) {
+                JsonNode node = contents.get(i);
+                try {
+                    Image image = MAPPER.treeToValue(node, Image.class);
+                    image.setRank(i + 1);
+                    image.resolveUrls();
+                    imagesList.add(image);
+                    log.debug("Parsed #{}: {} by {}", image.getRank(), image.getTitle(), image.getUserName());
+                } catch (Exception e) {
+                    log.warn("Failed to parse item #{}: {}", i + 1, e.getMessage());
+                }
+            }
 
-            imagesList.add(new Image(title, userName, data, pageUrl, smallUrl, bigUrl, i + 1));
+            log.info("Successfully parsed {} images", imagesList.size());
+
+            if (imagesList.isEmpty()) {
+                log.error("No images were parsed, skipping README update");
+                return;
+            }
+
+            // 4. 写入 README.md
+            FileUtils.writeReadme(imagesList);
+            log.info("README.md updated successfully");
+
+        } catch (IOException e) {
+            log.error("Pixiv Daily failed: {}", e.getMessage(), e);
         }
-
-        FileUtils.writeReadme(imagesList);
     }
-
 }

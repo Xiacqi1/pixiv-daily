@@ -1,50 +1,91 @@
 package com.microyu.pixiv;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.nio.file.StandardCopyOption;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class FileUtils {
+/**
+ * 文件工具类
+ * <p>
+ * 将图片列表渲染为 Markdown 表格，原子写入 README.md
+ */
+public final class FileUtils {
 
-    private static Path readmePath = Paths.get("README.md");
+    private static final Logger log = LoggerFactory.getLogger(FileUtils.class);
+    private static final Path README_PATH = Paths.get("README.md");
+    private static final int COLUMNS = 3;
 
-    /**
-     * 写入 README.md
-     *
-     * @param imgList
-     * @throws IOException
-     */
-    public static void writeReadme(List<Image> imgList) throws IOException {
-        if (!Files.exists(readmePath)) {
-            Files.createFile(readmePath);
-        }
-        //List<String> allLines = Files.readAllLines(path);
-        Files.write(readmePath, "## Pixiv Daily".getBytes());
-        Files.write(readmePath, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, ("Update: " + new SimpleDateFormat("yyyy-MM-dd").format(new Date())).getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, "|      |      |      |".getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
-        //Files.write(readmePath, "| ---- | ---- | ---- |".getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, "| :----: | :----: | :----: |".getBytes(), StandardOpenOption.APPEND);
-        Files.write(readmePath, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
-        int i = 1;
-        for (Image images : imgList) {
-            Files.write(readmePath, ("|" + images.toString()).getBytes(), StandardOpenOption.APPEND);
-            if (i % 3 == 0) {
-                Files.write(readmePath, "|".getBytes(), StandardOpenOption.APPEND);
-                Files.write(readmePath, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
-            }
-            i++;
-        }
-        if (i % 3 != 1) {
-            Files.write(readmePath, "|".getBytes(), StandardOpenOption.APPEND);
-        }
+    private FileUtils() {
+        // 工具类禁止实例化
     }
 
+    /**
+     * 将图片列表渲染为 Markdown 并写入 README.md
+     * <p>
+     * 使用原子写入：先写入临时文件，再 rename 覆盖目标文件
+     *
+     * @param imgList 图片列表
+     * @throws IOException 写入失败时抛出
+     */
+    public static void writeReadme(List<Image> imgList) throws IOException {
+        String content = renderMarkdown(imgList);
+
+        // 原子写入：先写临时文件，再 rename
+        Path tempPath = Paths.get("README.md.tmp");
+        Files.writeString(tempPath, content);
+        Files.move(tempPath, README_PATH, StandardCopyOption.REPLACE_EXISTING);
+
+        log.info("README.md written ({} images, {} bytes)", imgList.size(), content.length());
+    }
+
+    /**
+     * 将图片列表渲染为 Markdown 字符串
+     *
+     * @param imgList 图片列表
+     * @return Markdown 格式字符串
+     */
+    static String renderMarkdown(List<Image> imgList) {
+        String today = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("## Pixiv Daily\n");
+        sb.append("Update: ").append(today).append('\n');
+
+        // 表头
+        sb.append("|      |      |      |\n");
+        sb.append("| :----: | :----: | :----: |\n");
+
+        // 表格内容：每 COLUMNS 个一行
+        int i = 0;
+        for (Image image : imgList) {
+            if (i % COLUMNS == 0) {
+                sb.append('|');
+            }
+            sb.append(image.toString()).append('|');
+            i++;
+            if (i % COLUMNS == 0) {
+                sb.append('\n');
+            }
+        }
+
+        // 补齐最后一行（如果不是整行）
+        if (i % COLUMNS != 0) {
+            // 补空列
+            while (i % COLUMNS != 0) {
+                sb.append("      |");
+                i++;
+            }
+            sb.append('\n');
+        }
+
+        return sb.toString();
+    }
 }
