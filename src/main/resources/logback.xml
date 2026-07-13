@@ -3,14 +3,17 @@
     <!-- 控制台输出 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
+            <!-- 输出模板 "时间 [等级] [类名（最多36字符）] - 内容"-->
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%logger{36}] - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- 文件输出 -->
+    <!-- 文件输出 滚动文件输出类 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/pixiv-daily.log</file>
+        <!-- 滚动策略 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天滚动 -->
             <fileNamePattern>logs/pixiv-daily.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
