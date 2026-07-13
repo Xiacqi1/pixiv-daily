@@ -1,20 +1,21 @@
-# This workflow will build a Java project with Maven
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
+# 工作流名称
 name: Java CI with Maven
 
+# 工作流触发条件
 on:
+  # 定时 Cron 表达式
   schedule:
-    # * is a special character in YAML so you have to quote this string
     - cron:  '5 4 * * *' # utc+8 12:05
+  # 监听
   watch:
+    # 当仓库被Star时，触发
     types: started
 
 jobs:
   build:
+    runs-on: ubuntu-latest # 运行环境
 
-    runs-on: ubuntu-latest
-
+    # 任务步骤
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -27,8 +28,8 @@ jobs:
       run: java -jar target/pixiv-daily-jar-with-dependencies.jar
     - name: Commit files
       run: |
-         git config --local user.email "gxywy@hotmail.com"
-         git config --local user.name "gxywy"
+         git config --local user.email "2645047361@qq.com"
+         git config --local user.name "Xiacqi1"
          git add README.md
          git commit -m "update readme.md"
     - name: Push changes
