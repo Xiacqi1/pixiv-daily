@@ -10,31 +10,19 @@ import java.time.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * HTTP 工具类
- * <p>
- * 基于 Java 11 HttpClient，支持超时、重试（指数退避）和响应码校验
- */
 public final class HttpUtls {
 
     private static final Logger log = LoggerFactory.getLogger(HttpUtls.class);
 
+    // 创建实例，用于发送请求
     private static final HttpClient HTTP_CLIENT = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.NORMAL)
             .connectTimeout(Duration.ofMillis(Config.HTTP_TIMEOUT_MS))
             .build();
 
     private HttpUtls() {
-        // 工具类禁止实例化
     }
 
-    /**
-     * 请求指定 URL，返回响应内容（带重试）
-     *
-     * @param url 请求地址
-     * @return 响应体字符串
-     * @throws IOException 重试耗尽后仍失败时抛出
-     */
     public static String getHttpContent(String url) throws IOException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))

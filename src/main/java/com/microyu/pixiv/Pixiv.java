@@ -10,11 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Pixiv Daily 主入口
- * <p>
- * 从 Pixiv 排行榜 API 获取 JSON 数据，解析图片信息，渲染到 IMAGES.md
- */
 public class Pixiv {
 
     private static final Logger log = LoggerFactory.getLogger(Pixiv.class);
@@ -26,10 +21,10 @@ public class Pixiv {
         log.info("Image count: {}, CDN: {}, Max retries: {}", Config.IMAGE_COUNT, Config.CDN_DOMAIN, Config.MAX_RETRIES);
 
         try {
-            // 1. 请求 API
+            // 请求 API
             String httpContent = HttpUtls.getHttpContent(Config.PIXIV_API_URL);
 
-            // 2. 解析 JSON
+            // 解析 JSON
             JsonNode root = MAPPER.readTree(httpContent);
             JsonNode contents = root.get("contents");
 
@@ -42,7 +37,7 @@ public class Pixiv {
             int count = Math.min(Config.IMAGE_COUNT, available);
             log.info("Found {} items, will process {}", available, count);
 
-            // 3. 解析图片列表
+            // 解析图片列表
             List<Image> imagesList = new ArrayList<>();
             for (int i = 0; i < count; i++) {
                 JsonNode node = contents.get(i);
@@ -64,7 +59,7 @@ public class Pixiv {
                 return;
             }
 
-            // 4. 写入 IMAGES.md
+            // 写入 IMAGES.md
             FileUtils.writeImages(imagesList);
             log.info("IMAGES.md updated successfully");
 
