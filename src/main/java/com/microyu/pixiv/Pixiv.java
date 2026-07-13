@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Pixiv Daily 主入口
  * <p>
- * 从 Pixiv 排行榜 API 获取 JSON 数据，解析图片信息，渲染到 README.md
+ * 从 Pixiv 排行榜 API 获取 JSON 数据，解析图片信息，渲染到 IMAGES.md
  */
 public class Pixiv {
 
@@ -60,13 +60,13 @@ public class Pixiv {
             log.info("Successfully parsed {} images", imagesList.size());
 
             if (imagesList.isEmpty()) {
-                log.error("No images were parsed, skipping README update");
+                log.error("No images were parsed, skipping IMAGES update");
                 return;
             }
 
-            // 4. 写入 README.md
-            FileUtils.writeReadme(imagesList);
-            log.info("README.md updated successfully");
+            // 4. 写入 IMAGES.md
+            FileUtils.writeIMAGES(imagesList);
+            log.info("IMAGES.md updated successfully");
 
         } catch (IOException e) {
             log.error("Pixiv Daily failed: {}", e.getMessage(), e);

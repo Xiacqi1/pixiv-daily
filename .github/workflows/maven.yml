@@ -32,11 +32,11 @@ jobs:
       - name: Run Java Application
         run: java -jar target/pixiv-daily-jar-with-dependencies.jar
 
-      - name: Commit and push README
+      - name: Commit and push IMAGES
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "update readme.md"
-          file_pattern: "README.md"
+          commit_message: "update IMAGES.md"
+          file_pattern: "IMAGES.md"
 
       - name: Upload logs on failure
         if: failure()
