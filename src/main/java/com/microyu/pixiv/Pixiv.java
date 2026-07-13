@@ -65,7 +65,7 @@ public class Pixiv {
             }
 
             // 4. 写入 IMAGES.md
-            FileUtils.writeIMAGES(imagesList);
+            FileUtils.writeImages(imagesList);
             log.info("IMAGES.md updated successfully");
 
         } catch (IOException e) {
