@@ -46,9 +46,30 @@ jobs:
           path: logs/
           retention-days: 7
 
-      - name: Upload zip to Artifacts
-        uses: actions/upload-artifact@v4
+#      - name: Upload zip to Artifacts
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: pixiv-daily-${{ github.run_number }}
+#          path: releases/*.zip
+#          retention-days: 7
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: pixiv-daily-${{ github.run_number }}
-          path: releases/*.zip
-          retention-days: 7
+          tag_name: daily-${{ github.run_number }}
+          name: Daily ${{ github.run_number }}
+          files: releases/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GIT_TOKEN }}
+      - name: Delete old releases
+        run: |
+          # 删除 7 天前的 Release
+          gh release list --limit 100 | while read -r line; do
+            tag=$(echo "$line" | awk '{print $1}')
+            date=$(echo "$line" | awk '{print $4}')
+            if [[ $(date -d "$date" +%s) -lt $(date -d '7 days ago' +%s) ]]; then
+              echo "Deleting release: $tag"
+              gh release delete "$tag" --yes
+            fi
+          done
+        env:
+          GH_TOKEN: ${{ secrets.MY_GIT_TOKEN }}
