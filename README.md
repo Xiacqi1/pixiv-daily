@@ -1,20 +1,126 @@
-## Pixiv Daily
-Update: 2026-07-13
-|      |      |      |
-| :----: | :----: | :----: |
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/16/147051637_p0_master1200.jpg) **#1** [ブルーバケーション](https://www.pixiv.net/artworks/147051637) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/16/147051637_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/16/147051637_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/00/03/147065583_p0_master1200.jpg) **#2** [じいさんばあさん若返る【238】](https://www.pixiv.net/artworks/147065583) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/00/03/147065583_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/00/03/147065583_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/03/32/147052101_p0_master1200.jpg) **#3** [常世](https://www.pixiv.net/artworks/147052101) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/03/32/147052101_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/03/32/147052101_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092182_p0_master1200.jpg) **#4** [デコミクちゃん🍒](https://www.pixiv.net/artworks/147092182) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092182_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092182_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/45/44/147094503_p0_master1200.jpg) **#5** [不意うち💋](https://www.pixiv.net/artworks/147094503) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/45/44/147094503_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/45/44/147094503_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/00/36/147074934_p0_master1200.jpg) **#6** [C108新刊ご予約開始♥](https://www.pixiv.net/artworks/147074934) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/00/36/147074934_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/00/36/147074934_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/00/12/147108095_p0_master1200.jpg) **#7** [【会社と私生活】3人のオンとオフ](https://www.pixiv.net/artworks/147108095) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/00/12/147108095_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/00/12/147108095_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/01/50/147051939_p0_master1200.jpg) **#8** [-3.5-](https://www.pixiv.net/artworks/147051939) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/01/50/147051939_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/01/50/147051939_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/23/147092236_p0_master1200.jpg) **#9** [Assembly](https://www.pixiv.net/artworks/147092236) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/23/147092236_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/23/147092236_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/02/47/147092636_p0_master1200.jpg) **#10** [怪異になってよかった事、３選！](https://www.pixiv.net/artworks/147092636) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/02/47/147092636_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/02/47/147092636_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/33/147051727_p0_master1200.jpg) **#11** [蒼が過ぎ去った跡](https://www.pixiv.net/artworks/147051727) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/33/147051727_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/33/147051727_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/18/03/32/147077108_p0_master1200.jpg) **#12** [グルタミン酸革命令嬢](https://www.pixiv.net/artworks/147077108) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/18/03/32/147077108_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/18/03/32/147077108_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/12/147051609_p0_master1200.jpg) **#13** [セイアの温泉ヨガ](https://www.pixiv.net/artworks/147051609) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/12/147051609_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/12/147051609_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/12/00/12/147066983_p0_master1200.jpg) **#14** [【会社と私生活】保のオフ](https://www.pixiv.net/artworks/147066983) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/12/00/12/147066983_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/12/00/12/147066983_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/17/147092201_p0_master1200.jpg) **#15** [男の娘ビフォーアフター](https://www.pixiv.net/artworks/147092201) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/17/147092201_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/17/147092201_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/07/48/147081738_p0_master1200.jpg) **#16** [バスログ](https://www.pixiv.net/artworks/147081738) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/07/48/147081738_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/07/48/147081738_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/32/28/147085620_p0_master1200.jpg) **#17** [五巻発売を祝いながら年齢を詐称してるVtuber](https://www.pixiv.net/artworks/147085620) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/32/28/147085620_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/32/28/147085620_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/02/29/147052009_p0_master1200.jpg) **#18** [人の子などに惚れとうない 21](https://www.pixiv.net/artworks/147052009) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/02/29/147052009_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/02/29/147052009_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/18/147051649_p0_master1200.jpg) **#19** [清豊の風](https://www.pixiv.net/artworks/147051649) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/18/147051649_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/18/147051649_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/10/09/35/147084023_p0_master1200.jpg) **#20** [SCPをざっくり紹介358](https://www.pixiv.net/artworks/147084023) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/10/09/35/147084023_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/10/09/35/147084023_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/19/35/20/147080319_p0_master1200.jpg) **#21** [くっコロされてくれ女騎士　その5](https://www.pixiv.net/artworks/147080319) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/19/35/20/147080319_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/19/35/20/147080319_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/08/22/147052369_p0_master1200.jpg) **#22** [「これ…上からまる見えなんだけど」](https://www.pixiv.net/artworks/147052369) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/08/22/147052369_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/08/22/147052369_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/42/47/147083196_p0_master1200.jpg) **#23** [ラルトス・キルリア・エルレイド・メガエルレイドモチーフの武器](https://www.pixiv.net/artworks/147083196) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/42/47/147083196_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/42/47/147083196_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/03/34/58/147098599_p0_master1200.jpg) **#24** [パルキアのリング・ディアルガの懐中時計](https://www.pixiv.net/artworks/147098599) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/03/34/58/147098599_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/03/34/58/147098599_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/14/147051624_p0_master1200.jpg) **#25** [月下香幽芳](https://www.pixiv.net/artworks/147051624) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/14/147051624_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/00/00/14/147051624_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/51/27/147109571_p0_master1200.jpg) **#26** [.](https://www.pixiv.net/artworks/147109571) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/51/27/147109571_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/12/51/27/147109571_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/29/44/147064922_p0_master1200.jpg) **#27** [［仕事絵］Himemiya Rie Birthday 2026](https://www.pixiv.net/artworks/147064922) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/29/44/147064922_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/29/44/147064922_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/08/50/147064469_p0_master1200.jpg) **#28** [まのさば𝕏落描きまとめ①](https://www.pixiv.net/artworks/147064469) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/08/50/147064469_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/08/50/147064469_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/13/15/07/147069053_p0_master1200.jpg) **#29** [ちびカエ　其の漆](https://www.pixiv.net/artworks/147069053) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/13/15/07/147069053_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/13/15/07/147069053_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092181_p0_master1200.jpg) **#30** [うすチュウとポッチャマ](https://www.pixiv.net/artworks/147092181) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092181_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/00/00/15/147092181_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/13/01/147059135_p0_master1200.jpg) **#31** [とても涼しげな絵です（？）](https://www.pixiv.net/artworks/147059135) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/13/01/147059135_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/13/01/147059135_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/21/15/23/147127571_p0_master1200.jpg) **#32** [0÷0=年齢を詐称してるVtuber](https://www.pixiv.net/artworks/147127571) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/21/15/23/147127571_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/21/15/23/147127571_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/19/07/42/147121718_p0_master1200.jpg) **#33** [晴野さんのことなんて全然好き40話](https://www.pixiv.net/artworks/147121718) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/19/07/42/147121718_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/19/07/42/147121718_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/09/20/25/147063391_p0_master1200.jpg) **#34** [ブラボらくがきまとめ17](https://www.pixiv.net/artworks/147063391) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/09/20/25/147063391_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/09/20/25/147063391_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/22/16/147059263_p0_master1200.jpg) **#35** [Anime EXPO 2026](https://www.pixiv.net/artworks/147059263) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/22/16/147059263_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/05/22/16/147059263_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/35/50/147065059_p0_master1200.jpg) **#36** [［仕事絵］綿宮あひる3周年](https://www.pixiv.net/artworks/147065059) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/35/50/147065059_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/35/50/147065059_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/44/16/147086104_p0_master1200.jpg) **#37** [幼馴染](https://www.pixiv.net/artworks/147086104) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/44/16/147086104_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/44/16/147086104_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/16/41/04/147116090_p0_master1200.jpg) **#38** [釣](https://www.pixiv.net/artworks/147116090) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/16/41/04/147116090_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/16/41/04/147116090_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/23/32/147075603_p0_master1200.jpg) **#39** [メカクレを前にしたバソは基本的に無敵](https://www.pixiv.net/artworks/147075603) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/23/32/147075603_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/23/32/147075603_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/47/21/147083368_p0_master1200.jpg) **#40** [💛](https://www.pixiv.net/artworks/147083368) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/47/21/147083368_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/47/21/147083368_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/07/55/48/147100822_p0_master1200.jpg) **#41** [幼なじみとおにぎり](https://www.pixiv.net/artworks/147100822) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/07/55/48/147100822_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/07/55/48/147100822_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/14/43/147082057_p0_master1200.jpg) **#42** [桑多涅](https://www.pixiv.net/artworks/147082057) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/14/43/147082057_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/20/14/43/147082057_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/31/27/147064976_p0_master1200.jpg) **#43** [［仕事絵］Oridays](https://www.pixiv.net/artworks/147064976) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/31/27/147064976_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/31/27/147064976_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/45/37/147066595_p0_master1200.jpg) **#44** [🏮](https://www.pixiv.net/artworks/147066595) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/45/37/147066595_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/11/45/37/147066595_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/18/32/00/147120151_p0_master1200.jpg) **#45** [クレッフィの腕輪 / ユニランピアス](https://www.pixiv.net/artworks/147120151) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/18/32/00/147120151_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/12/18/32/00/147120151_p0.png)|
-|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/37/29/147085842_p0_master1200.jpg) **#46** [謎の外星人](https://www.pixiv.net/artworks/147085842) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/37/29/147085842_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/21/37/29/147085842_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/47/49/147076359_p0_master1200.jpg) **#47** [王女的苹果（2p）](https://www.pixiv.net/artworks/147076359) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/47/49/147076359_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/17/47/49/147076359_p0.png)|![](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/20/26/147064718_p0_master1200.jpg) **#48** [春、卒業式。](https://www.pixiv.net/artworks/147064718) download: [JPG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/20/26/147064718_p0.jpg) [PNG](https://pixiv.microyu.workers.dev/c/480x960/img-master/img/2026/07/11/10/20/26/147064718_p0.png)|
+# Pixiv Daily
+
+> 基于 [gxywy/pixiv-daily](https://github.com/gxywy/pixiv-daily) 重构，新增图片下载、ZIP 打包和自动发布 Release 功能。
+
+自动获取 Pixiv 每日排行榜，生成 `IMAGES.md` 图片展示页。开启下载模式后，会下载排行榜图片并打包为 ZIP，再通过 GitHub Actions 发布到 Release。
+
+## 功能
+
+- 自动抓取 Pixiv 日榜 Top 50
+- 生成 `IMAGES.md` 图片预览
+- 支持下载图片到本地
+- 支持将每日图片打包为 ZIP
+- GitHub Actions 每日定时运行
+- 自动发布 Release，保留近 7 天的图片包
+- 支持代理、请求超时和重试配置
+
+## 每日图片
+
+[查看今日图片](./IMAGES.md)
+
+## 下载图片包
+
+[Releases 页面](https://github.com/Xiacqi1/pixiv-daily/releases) 可以下载近 7 天的每日图片 ZIP 包。
+
+## 本地运行
+
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/Xiacqi1/pixiv-daily.git
+cd pixiv-daily
+```
+
+### 2. 编译
+
+项目使用 Java 17 和 Maven。
+
+```bash
+mvn clean package
+```
+
+编译后会生成可执行 JAR：
+
+```text
+target/pixiv-daily-jar-with-dependencies.jar
+```
+
+### 3. 只更新 IMAGES.md
+
+```bash
+java -jar target/pixiv-daily-jar-with-dependencies.jar
+```
+
+### 4. 更新 IMAGES.md 并下载、打包图片
+
+```bash
+java -jar target/pixiv-daily-jar-with-dependencies.jar --download
+```
+
+下载模式会将图片临时保存到 `daily-images/`，再打包到 `releases/` 目录下。
+
+> 注意：当前程序只会在 API 返回的排行榜日期为昨日时执行下载和打包，避免重复打包非最新榜单。
+
+### 5. 使用代理运行
+
+国内环境如果无法直连 Pixiv，可以为 JVM 配置 HTTPS 代理：
+
+```bash
+java -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=10808 -jar target/pixiv-daily-jar-with-dependencies.jar --download
+```
+
+## 环境变量
+
+| 变量名 | 默认值     | 说明 |
+| --- |---------| --- |
+| `PIXIV_API_URL` | --      | Pixiv 排行榜 API |
+| `IMAGE_COUNT` | `50`    | 抓取图片数量 |
+| `CDN_DOMAIN` | --      | 图片 CDN 反代域名，用于替换 `i.pximg.net` |
+| `HTTP_TIMEOUT_MS` | `10000` | HTTP 请求超时时间，单位毫秒 |
+| `MAX_RETRIES` | `3`     | HTTP 请求最大重试次数 |
+
+### Windows CMD 示例
+
+```cmd
+set PIXIV_API_URL=https://你的镜像地址/ranking.php
+set IMAGE_COUNT=30
+java -jar target/pixiv-daily-jar-with-dependencies.jar --download
+```
+
+### Windows PowerShell 示例
+
+```powershell
+$env:PIXIV_API_URL="https://你的镜像地址/ranking.php"
+$env:IMAGE_COUNT="30"
+java -jar target/pixiv-daily-jar-with-dependencies.jar --download
+```
+
+## GitHub Actions
+
+仓库内置 GitHub Actions 工作流，默认每天运行一次：
+
+1. 使用 Maven 编译项目
+2. 运行程序并更新 `IMAGES.md`
+3. 下载图片并生成 ZIP 包
+4. 自动提交 `IMAGES.md`
+5. 创建 Release 并上传 ZIP
+6. 清理 7 天前的旧 Release
+
+自动发布 Release 需要仓库配置 `MY_GIT_TOKEN` Secret，并授予发布 Release 所需权限。
+
+## 主要改动
+
+相对原项目，本项目主要改动如下：
+
+- 重构代码结构，拆分配置、HTTP 请求、Markdown 生成、文件下载和打包逻辑
+- 新增 `--download` 参数，支持下载图片到本地
+- 新增每日图片 ZIP 打包功能
+- 新增 GitHub Actions 自动发布 Release
+- 新增旧 Release 自动清理逻辑，只保留近 7 天
+- 优化并发下载性能
+- 优化日志输出和 HTTP 重试配置
+
+## 原项目
+
+本项目 Fork 自 [gxywy/pixiv-daily](https://github.com/gxywy/pixiv-daily)，感谢原作者。
+
