@@ -35,3 +35,6 @@ build/
 ### Runtime ###
 logs/
 IMAGES.md.tmp
+daily-images/
+releases/
+*.zip

@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +29,7 @@ public class Pixiv {
             // 解析 JSON
             JsonNode root = MAPPER.readTree(httpContent);
             JsonNode contents = root.get("contents");
+            String dateTitle = root.get("date").asText();
 
             if (contents == null || !contents.isArray()) {
                 log.error("API response does not contain 'contents' array");
@@ -62,6 +65,16 @@ public class Pixiv {
             // 写入 IMAGES.md
             FileUtils.writeImages(imagesList);
             log.info("IMAGES.md updated successfully");
+
+            boolean download = args.length > 0 && "--download".equals(args[0]);
+            String yesterday = LocalDate.now().minusDays(1).format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+            boolean isThisYesterday = dateTitle.equals(yesterday);
+            // 只有存在参数 --download 并且是最新的排名时才会下载
+            if (isThisYesterday && download) {
+                FilePackage.imagesDownload(imagesList);
+                FilePackage.zipDownload(dateTitle);
+            }
+
 
         } catch (IOException e) {
             log.error("Pixiv Daily failed: {}", e.getMessage(), e);

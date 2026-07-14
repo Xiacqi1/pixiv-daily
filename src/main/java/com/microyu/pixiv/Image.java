@@ -59,12 +59,12 @@ public class Image {
         boolean isSuffix = bigUrl.substring(bigUrl.lastIndexOf('.')+1).equals("jpg");
         if (isSuffix) {
             return String.format(
-                    "![](%s) **#%s** [%s](%s) download: [JPG](%s)",
+                    "![](%s) **#%s** [%s](%s) [[download](%s)]",
                     smallUrl, rank, title, pageUrl, bigUrl
             );
         }
         return String.format(
-                "![](%s) **#%s** [%s](%s) download: [PNG](%s)",
+                "![](%s) **#%s** [%s](%s) [[download](%s)]",
                 smallUrl, rank, title, pageUrl, bigUrl.replace("jpg", "png")
         );
     }

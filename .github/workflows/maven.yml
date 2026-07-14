@@ -4,9 +4,9 @@
 name: Java CI with Maven
 
 on:
-  # 定时触发：UTC 04:05 = 北京时间 12:05
+  # 定时触发：UTC 04:15 = 北京时间 12:15
   schedule:
-    - cron: '5 4 * * *'
+    - cron: '15 4 * * *'
   # 手动触发
   workflow_dispatch:
 
@@ -30,7 +30,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Run Java Application
-        run: java -jar target/pixiv-daily-jar-with-dependencies.jar
+        run: java -jar target/pixiv-daily-jar-with-dependencies.jar --download
 
       - name: Commit and push IMAGES
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -44,4 +44,11 @@ jobs:
         with:
           name: pixiv-daily-logs
           path: logs/
+          retention-days: 7
+
+      - name: Upload zip to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pixiv-daily-${{ github.run_number }}
+          path: releases/*.zip
           retention-days: 7
