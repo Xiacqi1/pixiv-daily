@@ -4,7 +4,7 @@
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <!-- 输出模板 "时间 [等级] [类名（最多36字符）] - 内容"-->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%logger{36}] - %msg%n</pattern>
+            <pattern> %d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -18,7 +18,7 @@
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%logger{36}] - %msg%n</pattern>
+            <pattern> %d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>
         </encoder>
     </appender>
 

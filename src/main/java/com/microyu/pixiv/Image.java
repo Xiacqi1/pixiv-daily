@@ -2,13 +2,14 @@ package com.microyu.pixiv;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.Objects;
+import java.util.regex.Pattern;
 
-/**
- * Pixiv 排行榜图片数据模型
- */
+// JSON 反序列化时忽略未知字段
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Data
 public class Image {
 
     @JsonProperty("title")
@@ -26,35 +27,27 @@ public class Image {
     @JsonProperty("url")
     private String originalUrl;
 
-    /** 排名序号（非 JSON 字段，解析后赋值） */
     private int rank;
 
-    /** 缩略图 URL（CDN 反代） */
     private String smallUrl;
 
-    /** 原图 URL（CDN 反代） */
     private String bigUrl;
 
-    /** 页面地址 */
     private String pageUrl;
 
     public Image() {
         // Jackson 反序列化需要无参构造
     }
 
-    /**
-     * 根据原始 JSON 数据补全衍生字段
-     * <p>
-     * 在 Jackson 反序列化完成后调用，用于生成 CDN URL、页面地址等
-     */
+    private static final Pattern SIZE_PATTERN = Pattern.compile("/c/\\d+x\\d+/img-master/");
+
     public void resolveUrls() {
         if (originalUrl != null) {
             // 缩略图：替换域名为 CDN
             this.smallUrl = originalUrl.replace("i.pximg.net", Config.CDN_DOMAIN);
-            // 原图：路径替换为 original，去掉 _master1200 后缀
-            this.bigUrl = smallUrl
-                    .replace("/c/240x480/img-master/", "/img-original/")
-                    .replace("_master1200", "");
+            // 原图：将 /c/{宽}x{高}/img-master/ 替换为 /img-original/，并去掉 _master{数字} 后缀
+            this.bigUrl = SIZE_PATTERN.matcher(smallUrl).replaceFirst("/img-original/")
+                    .replaceAll("_master\\d+", "");
         }
         if (illustId > 0) {
             this.pageUrl = "https://www.pixiv.net/artworks/" + illustId;
@@ -63,77 +56,24 @@ public class Image {
 
     @Override
     public String toString() {
+        boolean isSuffix = bigUrl.substring(bigUrl.lastIndexOf('.')+1).equals("jpg");
+        if (isSuffix) {
+            return String.format(
+                    "![](%s) **#%s** [%s](%s) download: [JPG](%s)",
+                    smallUrl, rank, title, pageUrl, bigUrl
+            );
+        }
         return String.format(
-                "![](%s) **#%s** [%s](%s) download: [JPG](%s) [PNG](%s)",
-                smallUrl, rank, title, pageUrl, bigUrl, bigUrl != null ? bigUrl.replace("jpg", "png") : ""
+                "![](%s) **#%s** [%s](%s) download: [PNG](%s)",
+                smallUrl, rank, title, pageUrl, bigUrl.replace("jpg", "png")
         );
     }
 
-    // --- Getters & Setters ---
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public long getIllustId() {
-        return illustId;
-    }
-
-    public void setIllustId(long illustId) {
-        this.illustId = illustId;
-    }
-
-    public String getOriginalUrl() {
-        return originalUrl;
-    }
-
-    public void setOriginalUrl(String originalUrl) {
-        this.originalUrl = originalUrl;
-    }
-
-    public int getRank() {
-        return rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
-    }
-
-    public String getSmallUrl() {
-        return smallUrl;
-    }
-
-    public String getBigUrl() {
-        return bigUrl;
-    }
-
-    public String getPageUrl() {
-        return pageUrl;
-    }
-
+    // 重写 equals 方法，去重
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        // 如果对象为空或类不同，则返回 false
         if (o == null || getClass() != o.getClass()) return false;
         Image image = (Image) o;
         return illustId == image.illustId && rank == image.rank
