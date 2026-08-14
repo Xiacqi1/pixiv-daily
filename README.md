@@ -27,7 +27,7 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/Xiacqi1/pixiv-daily.git
+git clone https://github.com/Xiacqi1/pixiv-daily-new.git
 cd pixiv-daily
 ```
 
